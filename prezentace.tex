@@ -1,4 +1,4 @@
-\documentclass[10pt,xcolor=pdflatex,hyperref={unicode}]{beamer}
+\documentclass[10pt,xcolor=pdflatex,hyperref={unicode},aspectratio=169]{beamer}
 \usepackage{newcent}
 \usepackage[utf8]{inputenc}
 \usepackage[czech]{babel}
@@ -45,7 +45,7 @@ xflajs00@fit.vutbr.cz}
         
         \textit{Real-Time Photorealistic Rendering of Voxel Scenes}
         \bigbreak
-        \includegraphics[width=\textwidth]{img/render1.png}%
+        \includegraphics[width=0.9\textwidth]{img/render1.png}%
     \end{center}
 \end{frame}
 
@@ -83,7 +83,9 @@ xflajs00@fit.vutbr.cz}
         \item Sparse voxel octree -- modely
         \item Bounding volume hierarchy -- scéna
     \end{itemize}
-    \includegraphics[scale=0.8]{img/scene_structure.png}%
+    \begin{center}
+        \includegraphics[scale=0.8]{img/scene_structure.png}%    
+    \end{center}
 \end{frame}
 
 \begin{frame}\frametitle{Výpočet průsečíku se scénou}
@@ -92,7 +94,9 @@ xflajs00@fit.vutbr.cz}
         \item Octree ray marching pouze v kandidátních uzlech
     \end{itemize}
     \begin{column}{\textwidth}
-        \includegraphics[width=\textwidth]{img/bvh_iter.png}
+        \begin{center}
+            \includegraphics[width=0.8\textwidth]{img/bvh_iter.png}
+        \end{center}
     \end{column}
 \end{frame}
 
@@ -112,13 +116,17 @@ xflajs00@fit.vutbr.cz}
 
 \begin{frame}\frametitle{Sondy světelného pole - primární paprsky}
     \begin{column}{\textwidth}
-        \includegraphics[width=\textwidth]{img/probe_scene_render.png}
+        \begin{center}
+            \includegraphics[width=0.8\textwidth]{img/probe_scene_render.png}
+        \end{center}
     \end{column}
 \end{frame}
 
 \begin{frame}\frametitle{Před-vypočtené nepřímé osvětlení}
     \begin{column}{\textwidth}
-        \includegraphics[width=\textwidth]{img/indirect_probe.png}
+        \begin{center}
+            \includegraphics[width=0.8\textwidth]{img/indirect_probe.png}
+        \end{center}
     \end{column}
 \end{frame}
 
@@ -155,7 +163,9 @@ xflajs00@fit.vutbr.cz}
 
 \begin{frame}\frametitle{Rychlost vykreslování}
     \begin{column}{\textwidth}
-        \includegraphics[width=\textwidth]{img/big_scene.png}
+        \begin{center}
+            \includegraphics[width=0.85\textwidth]{img/big_scene.png}
+        \end{center}
     \end{column}
     \begin{itemize}
         \item 12M voxelů
