@@ -17,14 +17,14 @@
 
 \author[]{Bc. Petr Flajšingr}
 
-\institute[]{Brno University of Technology, Faculty of Information Technology\\
+%\institute[]{Brno University of Technology, Faculty of Information Technology\\
+%Bo\v{z}et\v{e}chova 1/2. 612 66 Brno - Kr\'alovo Pole\\
+%xflajs00@fit.vutbr.cz}
+
+\institute[]{Fakulta informačních technologií
+Vysokého učení technického v Brně\\
 Bo\v{z}et\v{e}chova 1/2. 612 66 Brno - Kr\'alovo Pole\\
 xflajs00@fit.vutbr.cz}
-
-%\institute[]{Fakulta informačních technologií
-%Vysokého učení technického v Brně\\
-%Bo\v{z}et\v{e}chova 1/2. 612 66 Brno - Kr\'alovo Pole\\
-%login@fit.vutbr.cz}
 
 % České logo - Czech logo
 % beamerouterthemeFIT.sty řádek 9: fitlogo1_cz
@@ -60,28 +60,24 @@ xflajs00@fit.vutbr.cz}
             \end{itemize}
         \end{column}
         \begin{column}{0.5\textwidth}
-            \includegraphics[scale=0.16]{img/Vulkan.png}
+            \textbf{Důležité články} \\
+            \textit{Efficient Sparse Voxel Octrees}\\
+            \textit{Real-Time Global Illumination using Precomputed Light Field Probes}
+            %\includegraphics[scale=0.16]{img/Vulkan.png}
         \end{column}
     \end{columns}
     
     \bigbreak
     \bigbreak
-    
-    \textbf{Důležité články} \\
-    \textit{Efficient Sparse Voxel Octrees}
-    \begin{itemize}
-        \item Reprezentace voxelových dat
-    \end{itemize}
-    \textit{Real-Time Global Illumination using Precomputed Light Field Probes}
-    \begin{itemize}
-        \item Globální osvětlení
-    \end{itemize}
+    \begin{center}
+        \includegraphics[width=0.8\textwidth]{img/render_svo_indirect_1.png}%
+    \end{center} 
 \end{frame}
 
 \begin{frame}\frametitle{Reprezentace modelů ve scéně}
     \begin{itemize}
         \item Sparse voxel octree -- modely
-        \item Bounding volume hierarchy -- scéna
+        \item Hierarchie obalových těles -- scéna
     \end{itemize}
     \begin{center}
         \includegraphics[scale=0.8]{img/scene_structure.png}%    
@@ -164,28 +160,29 @@ xflajs00@fit.vutbr.cz}
 \begin{frame}\frametitle{Rychlost vykreslování}
     \begin{column}{\textwidth}
         \begin{center}
-            \includegraphics[width=0.85\textwidth]{img/big_scene.png}
+            \includegraphics[width=0.8\textwidth]{img/big_scene.png}
         \end{center}
     \end{column}
     \begin{itemize}
         \item 12M voxelů
-        \item 36 uzlů
-        \item 180 fps bez stínů, 140 se stíny
+        \item 36 modelů
+        \item 180 fps bez stínů, 140 fps se stíny
+        \item Měřeno na NVIDIA RTX 2070 SUPER
     \end{itemize}
 \end{frame}
 
-\begin{frame}\frametitle{Knihovny vytvořené v rámci projektu}
-    \begin{column}{0.5\textwidth}
-        \begin{itemize}
-            \item \texttt{pf\_common} -- obecné funkce, geometrie...
-            \item \texttt{pf\_glfw\_vulkan} -- zjednodušení práce s Vulkan a GLFW, mainloop...
-            \item \texttt{pf\_imgui} -- retained mode wrapper pro Dear ImGui
-        \end{itemize}
-    \end{column}
-    \begin{column}{0.5\textwidth}
-        \includegraphics[width=\textwidth]{img/pf_imgui.png}
-    \end{column}
-\end{frame}
+%\begin{frame}\frametitle{Knihovny vytvořené v rámci projektu}
+%    \begin{column}{0.5\textwidth}
+%        \begin{itemize}
+%            \item \texttt{pf\_common} -- obecné funkce, geometrie...
+%            \item \texttt{pf\_glfw\_vulkan} -- zjednodušení práce s Vulkan a GLFW, mainloop...
+%            \item \texttt{pf\_imgui} -- retained mode wrapper pro Dear ImGui
+%        \end{itemize}
+%    \end{column}
+%    \begin{column}{0.5\textwidth}
+%        \includegraphics[width=\textwidth]{img/pf_imgui.png}
+%    \end{column}
+%\end{frame}
 
 \begin{frame}\frametitle{Demonstrační aplikace}
     \begin{column}{\textwidth}
